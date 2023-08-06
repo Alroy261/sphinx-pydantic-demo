@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Common issues/bugs found using the sphinx documentation tool &mdash; autodoc-pydantic-demo  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/autodoc_pydantic.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="sphinx-pydantic" href="../libs-rst-files/modules.html" />
+    <link rel="prev" title="Welcome to autodoc-pydantic demo!" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            autodoc-pydantic-demo
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">README First!</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Common issues/bugs found using the sphinx documentation tool</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Pydantic Example</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../libs-rst-files/modules.html">sphinx-pydantic</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">autodoc-pydantic-demo</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Common issues/bugs found using the sphinx documentation tool</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/readme_dir/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="common-issues-bugs-found-using-the-sphinx-documentation-tool">
+<h1>Common issues/bugs found using the sphinx documentation tool<a class="headerlink" href="#common-issues-bugs-found-using-the-sphinx-documentation-tool" title="Permalink to this heading"></a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>I am actively working on more FAQs. Stay tuned!</p>
+</div>
+<ol class="arabic simple" start="0">
+<li><p>The file structure of this mini project is the following:</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>.
+├──<span class="w"> </span>Makefile
+├──<span class="w"> </span>build
+│<span class="w">   </span>├──<span class="w"> </span>doctrees
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>&lt;content-omitted&gt;
+│<span class="w">   </span>└──<span class="w"> </span>html
+│<span class="w">       </span>├──<span class="w"> </span>_sources
+│<span class="w">       </span>├──<span class="w"> </span>_static
+│<span class="w">       </span>├──<span class="w"> </span>genindex.html
+│<span class="w">       </span>├──<span class="w"> </span>index.html
+│<span class="w">       </span>├──<span class="w"> </span>libs-rst-files
+│<span class="w">       </span>├──<span class="w"> </span>objects.inv
+│<span class="w">       </span>├──<span class="w"> </span>py-modindex.html
+│<span class="w">       </span>├──<span class="w"> </span>readme_dir
+│<span class="w">       </span>├──<span class="w"> </span>search.html
+│<span class="w">       </span>└──<span class="w"> </span>searchindex.js
+├──<span class="w"> </span>libs
+│<span class="w">   </span>├──<span class="w"> </span>__init__.py
+│<span class="w">   </span>└──<span class="w"> </span>my_module.py
+├──<span class="w"> </span>make.bat
+└──<span class="w"> </span><span class="nb">source</span>
+<span class="w">    </span>├──<span class="w"> </span>conf.py
+<span class="w">    </span>├──<span class="w"> </span>index.rst
+<span class="w">    </span>├──<span class="w"> </span>libs-rst-files
+<span class="w">    </span>│<span class="w">   </span>├──<span class="w"> </span>libs.rst
+<span class="w">    </span>│<span class="w">   </span>├──<span class="w"> </span>modules.rst
+<span class="w">    </span>│<span class="w">   </span>└──<span class="w"> </span>my_module.rst
+<span class="w">    </span>└──<span class="w"> </span>readme_dir
+<span class="w">        </span>└──<span class="w"> </span>index.rst
+</pre></div>
+</div>
+<ol class="arabic">
+<li><p>One common issue is sphinx <strong>not able to pick up the documentation</strong>
+for the modules in the <code class="docutils literal notranslate"><span class="pre">libs</span></code> directory. This is because the <code class="docutils literal notranslate"><span class="pre">libs</span></code>
+directory is not in the <code class="docutils literal notranslate"><span class="pre">sys.path</span></code> of the python interpreter.</p>
+<p>To fix this, we need to add the following lines to the <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> file:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;..&#39;</span><span class="p">))</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;../libs&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The path you provided must be relative to where the <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> is located.
+In this case, <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> is located in the <code class="docutils literal notranslate"><span class="pre">source</span></code> directory, so we need
+to go up one level to reach the root directory of this mini project.</p>
+</div>
+</li>
+<li><p>Make sure <code class="docutils literal notranslate"><span class="pre">sphinxcontrib.autodoc_pydantic</span></code> is added as part of the <code class="docutils literal notranslate"><span class="pre">extensions</span></code> list.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sphinxcontrib.autodoc_pydantic&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</li>
+<li><p>Generate autodoc</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># suppose you are in the root directory of this mini project</span>
+$<span class="w"> </span>sphinx-apidoc<span class="w"> </span>-o<span class="w"> </span>source/libs-rst-files/<span class="w"> </span>../libs
+</pre></div>
+</div>
+<p>This will generate <code class="docutils literal notranslate"><span class="pre">libs-rst-files</span></code> directory inside <code class="docutils literal notranslate"><span class="pre">source</span></code>. All the rst files inside are
+auto-generated by sphinx.</p>
+</li>
+<li><p>In <code class="docutils literal notranslate"><span class="pre">source/index.rst</span></code>, make sure <code class="docutils literal notranslate"><span class="pre">libs-rst-files/modules.rst</span></code> is added.</p></li>
+<li><p>Go to root directory of this mini project and run <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code>. Then html files will be generated
+inside <code class="docutils literal notranslate"><span class="pre">build/html/</span></code> directory.</p></li>
+</ol>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title="Welcome to autodoc-pydantic demo!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../libs-rst-files/modules.html" class="btn btn-neutral float-right" title="sphinx-pydantic" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Alroy.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
